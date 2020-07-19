@@ -4,8 +4,8 @@ An animated widget that can show all digits by six animated clocks.
 
 ## Screenshots
 
-<img src="preview/1.gif" /> 
-<img src="preview/2.gif" />
+<img src="https://raw.githubusercontent.com/meTowhid/count_by_clock/master/preview/1.gif" /> 
+<img src="https://raw.githubusercontent.com/meTowhid/count_by_clock/master/preview/2.gif" />
 
 ## Usage
 
