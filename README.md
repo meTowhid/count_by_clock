@@ -105,6 +105,8 @@ class _DemoState extends State<Demo> {
 
 [Towhid](https://github.com/meTowhid)
 
+#### [Inspiration - ClockClock.com](https://clockclock.com)
+
 # License
 
     Copyright 2020 Towhid
