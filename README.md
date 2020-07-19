@@ -9,7 +9,7 @@ An animated widget that can show all digits by six animated clocks.
 
 ## Usage
 
-[Example](https://github.com/meTowhid/count_by_clock/blob/master/example/demo.dart)
+[Example](https://github.com/meTowhid/count_by_clock/blob/master/example/lib/main.dart)
 
 To use this package :
 

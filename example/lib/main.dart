@@ -1,5 +1,10 @@
 import 'package:count_by_clock/count_by_clock.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+void main() {
+  runApp(MaterialApp(home: Demo(), debugShowCheckedModeBanner: false));
+}
 
 class Demo extends StatefulWidget {
   @override
@@ -17,7 +22,7 @@ class _DemoState extends State<Demo> {
 
   @override
   Widget build(BuildContext context) {
-//    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIOverlays([]);
     return Scaffold(
       body: PageView(
         children: <Widget>[
@@ -67,12 +72,12 @@ class _DemoState extends State<Demo> {
   }
 
   _buildResponsive(Widget widget) => Center(
-    child: SizedBox(
-      width: MediaQuery.of(context).size.width * .80,
-      height: MediaQuery.of(context).size.height * .80,
-      child: FittedBox(
-        child: Center(child: widget),
-      ),
-    ),
-  );
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width * .80,
+          height: MediaQuery.of(context).size.height * .80,
+          child: FittedBox(
+            child: Center(child: widget),
+          ),
+        ),
+      );
 }
