@@ -1,12 +1,12 @@
 import 'package:count_by_clock/count_by_clock.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
+class Demo extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _DemoState createState() => _DemoState();
 }
 
-class _HomeState extends State<Home> {
+class _DemoState extends State<Demo> {
   int counter = 0;
 
   void _incrementCounter() {
@@ -44,6 +44,22 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
+          Container(
+            color: Colors.black87,
+            child: _buildResponsive(
+              // Almost all the changeable properties are here
+              CountByClock(
+                counter,
+                digitCount: 3,
+                tickColor: Colors.white,
+                baseColor: Colors.white10,
+                clockArea: 100,
+                tickThickness: 8,
+                flatStyle: true,
+                curve: Curves.elasticOut,
+              ),
+            ),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: _incrementCounter, child: Icon(Icons.add)),
@@ -52,8 +68,8 @@ class _HomeState extends State<Home> {
 
   _buildResponsive(Widget widget) => Center(
     child: SizedBox(
-      width: MediaQuery.of(context).size.width * .85,
-      height: MediaQuery.of(context).size.height * .85,
+      width: MediaQuery.of(context).size.width * .80,
+      height: MediaQuery.of(context).size.height * .80,
       child: FittedBox(
         child: Center(child: widget),
       ),

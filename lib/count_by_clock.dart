@@ -31,12 +31,12 @@ class CountByClock extends StatelessWidget {
         children: digits.map((digit) {
           return Digit(
             digit,
+            curve: curve,
             baseColor: baseColor,
             clockArea: clockArea,
-            tickThickness: tickThickness,
             tickColor: tickColor,
             flatStyle: flatStyle,
-            curve: curve,
+            tickThickness: tickThickness,
           );
         }).toList());
   }
