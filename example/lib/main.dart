@@ -46,6 +46,7 @@ class _DemoState extends State<Demo> {
                 tickThickness: 20,
                 flatStyle: true,
                 curve: Curves.elasticOut,
+                hideTick: true,
               ),
             ),
           ),

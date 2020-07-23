@@ -64,6 +64,7 @@ class _DemoState extends State<Demo> {
                 tickThickness: 20,
                 flatStyle: true,
                 curve: Curves.elasticOut,
+                hideTick: true,
               ),
             ),
           ),
@@ -126,6 +127,6 @@ class _DemoState extends State<Demo> {
 
 ## Getting Started
 
-For help getting started with Flutter, view our online [documentation](https://flutter.io/).
+For help getting started with Flutter, view online [documentation](https://flutter.io/).
 
 For help on editing package code, view the [documentation](https://flutter.io/developing-packages/).
