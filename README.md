@@ -1,4 +1,6 @@
 # count_by_clock
+[![Pub](https://img.shields.io/badge/pub-v0.0.4-blueviolet)](https://pub.dartlang.org/packages/count_by_clock)
+[![github](https://img.shields.io/badge/platform-flutter-blue)](https://github.com/meTowhid/count_by_clock)
 
 An animated widget that can show all digits by six animated clocks.
 

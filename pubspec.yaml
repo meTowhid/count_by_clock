@@ -1,6 +1,6 @@
 name: count_by_clock
 description: An animated widget that can show all digits by six animated clocks.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/meTowhid/count_by_clock
 
 
