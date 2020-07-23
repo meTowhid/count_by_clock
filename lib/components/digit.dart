@@ -7,8 +7,8 @@ class Digit extends StatelessWidget {
   final Digits digit;
   final Color baseColor, tickColor;
   final double clockArea, tickThickness;
+  final bool flatStyle, hideTick;
   final Curve curve;
-  final bool flatStyle;
 
   const Digit(
     this.digit, {
@@ -18,6 +18,7 @@ class Digit extends StatelessWidget {
     this.tickColor = Colors.black87,
     this.curve = Curves.easeInOut,
     this.flatStyle = false,
+    this.hideTick = false,
   });
 
   @override
@@ -40,5 +41,6 @@ class Digit extends StatelessWidget {
         baseColor: baseColor,
         flatStyle: flatStyle,
         tickThickness: tickThickness,
+        hideTick: hideTick,
       );
 }

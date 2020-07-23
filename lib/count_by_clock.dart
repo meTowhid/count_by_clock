@@ -6,8 +6,8 @@ class CountByClock extends StatelessWidget {
   final int number;
   final Color baseColor, tickColor;
   final double clockArea, tickThickness;
+  final bool flatStyle, hideTick;
   final int digitCount;
-  final bool flatStyle;
   final Curve curve;
 
   const CountByClock(
@@ -19,6 +19,7 @@ class CountByClock extends StatelessWidget {
     this.digitCount = 1,
     this.curve = Curves.easeInOut,
     this.flatStyle = false,
+    this.hideTick = false,
   });
 
   @override
@@ -37,6 +38,7 @@ class CountByClock extends StatelessWidget {
             tickColor: tickColor,
             flatStyle: flatStyle,
             tickThickness: tickThickness,
+            hideTick: hideTick,
           );
         }).toList());
   }

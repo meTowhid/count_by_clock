@@ -6,8 +6,16 @@ class ClockTick extends StatefulWidget {
   final double length, tickThickness;
   final SingleTickPosition tickPosition;
   final Curve curve;
+  final bool hideTick;
 
-  ClockTick({this.length, this.tickThickness, this.tickPosition = SingleTickPosition.zero, this.color = Colors.black, this.curve = Curves.easeInOut});
+  ClockTick({
+    this.length,
+    this.tickThickness,
+    this.tickPosition = SingleTickPosition.zero,
+    this.color = Colors.black,
+    this.curve = Curves.easeInOut,
+    this.hideTick = false,
+  });
 
   @override
   _ClockTickState createState() => _ClockTickState();
@@ -29,7 +37,11 @@ class _ClockTickState extends State<ClockTick> {
         angle: value,
         child: child,
       ),
-      child: Container(width: thickness, height: tickLength, decoration: tickDecoration),
+      child: AnimatedOpacity(
+          curve: Curves.easeOut,
+          duration: Duration(milliseconds: 700),
+          opacity: widget.tickPosition == SingleTickPosition.none && widget.hideTick ? 0 : 1,
+          child: Container(width: thickness, height: tickLength, decoration: tickDecoration)),
     );
   }
 }

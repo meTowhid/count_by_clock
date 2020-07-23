@@ -6,8 +6,8 @@ class Clock extends StatelessWidget {
   final DoubleTickPosition time;
   final Color baseColor, tickColor;
   final double radius, spacing, tickMargin, tickThickness;
+  final bool flatStyle, hideTick;
   final Curve curve;
-  final bool flatStyle;
 
   const Clock(
     this.time, {
@@ -19,6 +19,7 @@ class Clock extends StatelessWidget {
     this.tickColor = Colors.black,
     this.curve = Curves.easeInOut,
     this.flatStyle = false,
+    this.hideTick = false,
   });
 
   @override
@@ -43,8 +44,22 @@ class Clock extends StatelessWidget {
         alignment: Alignment.topCenter,
         child: Stack(
           children: <Widget>[
-            ClockTick(length: radius - tickMargin - spacing, tickPosition: time.hp1, color: tickColor, tickThickness: tickThickness, curve: curve),
-            ClockTick(length: radius - tickMargin - spacing, tickPosition: time.hp2, color: tickColor, tickThickness: tickThickness, curve: curve),
+            ClockTick(
+              length: radius - tickMargin - spacing,
+              tickPosition: time.hp1,
+              color: tickColor,
+              tickThickness: tickThickness,
+              curve: curve,
+              hideTick: hideTick,
+            ),
+            ClockTick(
+              length: radius - tickMargin - spacing,
+              tickPosition: time.hp2,
+              color: tickColor,
+              tickThickness: tickThickness,
+              curve: curve,
+              hideTick: hideTick,
+            ),
           ],
         ),
       ),
